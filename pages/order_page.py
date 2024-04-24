@@ -23,10 +23,14 @@ class OrderPage (BasePage):
     comment_field = [By.XPATH, "//input[@placeholder='Комментарий для курьера']"]
     make_order_button = [By.XPATH, ".//button[2][text()='Заказать']"]
     approval_button = [By.XPATH,".//button[text()='Да']"]
-    approval_message = [By.XPATH,".//div[text()='Заказ оформлен']"]
+    check_status_button = [By.XPATH,".//button[text()='Посмотреть статус']"]
     scooter = [By.XPATH,".//img[@alt='Scooter']"]
     yandex = [By.XPATH,".//img[@alt='Yandex']"]
 
+    @allure.step('Получить текст сообщения об оформлении заказа')
+    def get_check_status_message(self):
+        button_text = self.driver.find_element(*self.check_status_button)
+        return button_text.text
     @allure.step('Нажимаем на лого самоката')
     def scooter_logo_click(self):
         self.driver.find_element(*self.scooter).click()
