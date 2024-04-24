@@ -19,8 +19,9 @@ class TestQuestions:
          'Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.'),
         (6, 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.'),
         (7, 'Да, обязательно. Всем самокатов! И Москве, и Московской области.')])
-    def test_answers(self, driver, num, result): #3.Почему здесь driver?
+    def test_answers(self, driver, num, result):
         main_page = MainPage(driver)
+        main_page.accept_cookies()
         assert (main_page.get_answer_text
                 (
                     MainPageLocators.question_locator,

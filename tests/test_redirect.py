@@ -2,7 +2,6 @@ import urls
 from conftest import driver
 from pages.main_page import MainPage
 import allure
-import time
 from pages.base_page import BasePage
 from pages.order_page import OrderPage
 
@@ -27,7 +26,6 @@ class TestRedirect:
         main_page.accept_cookies()
         main_page.click_order_up_button()
         order_page.yandex_logo_click()
-        time.sleep(3) #Убрать!!!
-        base_page.switch_to_window()
-        time.sleep(3) #Убрать!!!
+        order_page.switch_page()
+
         assert base_page.get_current_url() == urls.DZEN_URL

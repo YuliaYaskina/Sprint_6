@@ -1,10 +1,14 @@
 
 from locators.order_page_locators import OrderPageLocators
+from locators.dzen_locators import DzenLocators
 from pages.base_page import BasePage
 import allure
 
 
 class OrderPage (BasePage):
+    @allure.step('Переключаемся на вкладку Дзен')
+    def switch_page(self):
+        self.switch_to_window(DzenLocators.NEWS)
     @allure.step('Получить текст сообщения об оформлении заказа')
     def get_check_status_message(self):
         button_text = self.find_element_with_wait(OrderPageLocators.check_status_button)
