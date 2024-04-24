@@ -27,7 +27,7 @@ class TestRedirect:
         main_page.accept_cookies()
         main_page.click_order_up_button()
         order_page.yandex_logo_click()
-        time.sleep(3)
+        time.sleep(3) #Убрать!!!
         base_page.switch_to_window()
-        time.sleep(3)
+        time.sleep(3) #Убрать!!!
         assert base_page.get_current_url() == urls.DZEN_URL

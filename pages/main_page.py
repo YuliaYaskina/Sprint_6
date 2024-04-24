@@ -14,7 +14,7 @@ class MainPage (BasePage):
         return self.get_text_from_element(locator_a_formatted)
 
     @allure.step('Нажимаем кнопку "Заказать вверху страницы')
-    def click_order_up_button(self, ORDER_UP_BUTTON_LOCATOR):
+    def click_order_up_button(self):
         self.find_element_with_wait(Locators.ORDER_UP_BUTTON_LOCATOR)
         self.click_to_element(Locators.ORDER_UP_BUTTON_LOCATOR)
 

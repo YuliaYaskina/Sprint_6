@@ -1,0 +1,26 @@
+from selenium.webdriver.common.by import By
+
+
+class OrderPageLocators:
+    name_field = [By.XPATH, ".//input[@placeholder='* Имя']"]
+    surname_field = [By.XPATH, ".//input[@placeholder='* Фамилия']"]
+    address_field = [By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']"]
+    metro_field = [By.XPATH, ".//input[@placeholder='* Станция метро']"]
+    metro_cherkizovskaya = [By.XPATH, ".//div[text()='Черкизовская']"]
+    metro_sokolniki = [By.XPATH, ".//div[text()='Сокольники']"]
+    phone_field = [By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']"]
+    go_on_button = [By.XPATH, ".//button[text()='Далее']"]
+    when_field = [By.XPATH, ".//input[@placeholder='* Когда привезти самокат']"]
+    data_picker_day01 = [By.XPATH, ".//div[@class = 'react-datepicker__day react-datepicker__day--001']"]
+    data_picker_day30 = [By.XPATH, ".//div[@class = 'react-datepicker__day react-datepicker__day--030']"]
+    period_field = [By.XPATH, ".//div[text()='* Срок аренды']"]
+    period_sutki_field = [By.XPATH, ".//div[text()='сутки']"]
+    period_7sutok_field = [By.XPATH, ".//div[text()='семеро суток']"]
+    colour_field_black = [By.XPATH, ".//label[@for='black']"]
+    colour_field_grey = [By.XPATH, ".//label[@for='grey']"]
+    comment_field = [By.XPATH, "//input[@placeholder='Комментарий для курьера']"]
+    make_order_button = [By.XPATH, ".//button[2][text()='Заказать']"]
+    approval_button = [By.XPATH, ".//button[text()='Да']"]
+    check_status_button = [By.XPATH, ".//button[text()='Посмотреть статус']"]
+    scooter = [By.XPATH, ".//img[@alt='Scooter']"]
+    yandex = [By.XPATH, ".//img[@alt='Yandex']"]
