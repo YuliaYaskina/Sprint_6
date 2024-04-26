@@ -4,7 +4,7 @@ import allure
 
 
 class BasePage:
-    @allure.step('Открываем браузер Firefox')
+    @allure.step('Создание экземпляра страницы')
     def __init__(self, driver):
         self.driver = driver
 

@@ -10,6 +10,7 @@ class TestMain:
     def test_click_order_up_button(self, driver):
         main_page = MainPage(driver)
         main_page.click_order_up_button()
+
         assert main_page.get_current_url() == urls.URL_ORDER
 
     @allure.title('Проверка перехода по кнопке Заказать внизу экрана')

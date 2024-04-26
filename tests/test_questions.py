@@ -1,6 +1,5 @@
 import pytest
 from conftest import driver
-from locators.main_page_locators import MainPageLocators
 from pages.main_page import MainPage
 import allure
 
@@ -22,9 +21,4 @@ class TestQuestions:
     def test_answers(self, driver, num, result):
         main_page = MainPage(driver)
         main_page.accept_cookies()
-        assert (main_page.get_answer_text
-                (
-                    main_page.get_question(),
-                    main_page.get_answer(),
-                    num
-                ) == result)
+        assert (main_page.get_answer_text(num) == result)

@@ -2,7 +2,6 @@ import urls
 from conftest import driver
 from pages.main_page import MainPage
 import allure
-from pages.base_page import BasePage
 from pages.order_page import OrderPage
 
 class TestRedirect:
