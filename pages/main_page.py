@@ -1,7 +1,8 @@
 
 from pages.base_page import BasePage
 import allure
-from locators.main_page_locators import MainPageLocators as Locators
+from locators.main_page_locators import MainPageLocators as Locators, MainPageLocators
+
 
 class MainPage (BasePage):
 
@@ -12,6 +13,16 @@ class MainPage (BasePage):
 
         self.find_element_with_wait(locator_q_formatted).click()
         return self.get_text_from_element(locator_a_formatted)
+
+    @allure.step('Получаем вопос по локатору')
+    def get_question(self):
+        qst = MainPageLocators.question_locator
+        return qst
+
+    @allure.step('Получаем ответ по локатору')
+    def get_answer(self):
+        answ = MainPageLocators.answer_locator
+        return answ
 
     @allure.step('Нажимаем кнопку "Заказать вверху страницы')
     def click_order_up_button(self):

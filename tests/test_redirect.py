@@ -22,10 +22,9 @@ class TestRedirect:
     def test_logo_yandex(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
-        base_page = BasePage(driver)
         main_page.accept_cookies()
         main_page.click_order_up_button()
         order_page.yandex_logo_click()
         order_page.switch_page()
 
-        assert base_page.get_current_url() == urls.DZEN_URL
+        assert main_page.get_current_url() == urls.DZEN_URL

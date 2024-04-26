@@ -24,7 +24,7 @@ class TestQuestions:
         main_page.accept_cookies()
         assert (main_page.get_answer_text
                 (
-                    MainPageLocators.question_locator,
-                    MainPageLocators.answer_locator,
+                    main_page.get_question(),
+                    main_page.get_answer(),
                     num
                 ) == result)
